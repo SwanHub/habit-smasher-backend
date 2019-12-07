@@ -11,6 +11,19 @@
 
 - `Heroku`
 
-## Website
+## Endpoint
 
-- `https://evening-depths-20761.herokuapp.com/`
+- `https://habit-smasher.herokuapp.com/`
+
+### 10 Steps to One Victorious Thin Vertical Slice
+
+1. Spinup local `Go` server with hello world endpoint
+2. Deploy to `Heroku`
+3. Connect `PostgreSQL` DB
+4. Create DB Schema + seed
+5. Query DB and display data in json
+6. Setup CORS, then fetch values from browser
+7. Create `React.js` App
+8. Fetch and display values from react app
+9. Deploy frontend to `Firebase`
+10. Basic styling with `CSS` and `SASS`
