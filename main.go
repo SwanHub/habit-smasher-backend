@@ -10,7 +10,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// Step 5: Fetch that data from a React App
+// Step 5: Fetch that data from browser
+// Step 6: Fetch and display that data from a React App
 
 func main() {
 	r := mux.NewRouter().StrictSlash(true)
