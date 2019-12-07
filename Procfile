@@ -1,1 +1,1 @@
-web: bin/HabitSmasher
+web: bin/habit-smasher
