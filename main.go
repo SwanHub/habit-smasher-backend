@@ -17,6 +17,6 @@ func main() {
 	r := mux.NewRouter()
 	// display all active habits
 	r.HandleFunc("/habits", routes.AllHabits)
-	r.HandleFunc("/schema", routes.CreateHabitTable)
+	// r.HandleFunc("/habits", routes.CreateHabitTable)
 	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), r))
 }
