@@ -10,7 +10,8 @@ import (
 )
 
 // Step 3: setup database with just habits table
-// Step 4: complete the first thin vertical slice by fetching from a React App
+// Step 4: query db for habits
+// Step 5: Fetch that data from a React App
 
 func main() {
 	r := mux.NewRouter()

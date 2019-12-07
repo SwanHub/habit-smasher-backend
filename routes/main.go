@@ -6,6 +6,9 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+
+	// used for the below db setup function, not sure why it shouldn't be included in this package
+	_ "github.com/lib/pq"
 )
 
 // SetDB establishes db connection, used in all routes
@@ -29,9 +32,9 @@ func CreateHabitTable(w http.ResponseWriter, r *http.Request) {
 
 	db.Exec(`CREATE TABLE habits(habit_id SERIAL PRIMARY KEY, title VARCHAR(100), active BOOLEAN)`)
 
-	db.Exec(`INSERT INTO habits (title, active) VALUES ('biting my nails', true)`)
-	db.Exec(`INSERT INTO habits (title, active) VALUES ('watching youtube videos', true)`)
-	db.Exec(`INSERT INTO habits (title, active) VALUES ('waking up late', true)`)
+	// db.Exec(`INSERT INTO habits (title, active) VALUES ('biting my nails', true)`)
+	// db.Exec(`INSERT INTO habits (title, active) VALUES ('watching youtube videos', true)`)
+	// db.Exec(`INSERT INTO habits (title, active) VALUES ('waking up late', true)`)
 
 	json.NewEncoder(w).Encode("you created and seeded the habits table")
 }
