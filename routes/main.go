@@ -1,9 +1,21 @@
 package routes
 
 import (
+	"database/sql"
 	"encoding/json"
+	"fmt"
 	"net/http"
+	"os"
 )
+
+// SetDB establishes db connection, used in all routes
+func SetDB() *sql.DB {
+	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	if err != nil {
+		fmt.Println(err)
+	}
+	return db
+}
 
 // AllHabits function displays all current active habits
 func AllHabits(w http.ResponseWriter, r *http.Request) {
