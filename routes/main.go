@@ -3,8 +3,6 @@ package routes
 import (
 	"encoding/json"
 	"net/http"
-
-	"github.com/SwanHub/Shipt/Shipt-LocalPractice/main"
 )
 
 // AllHabits function displays all current active habits
@@ -14,7 +12,7 @@ func AllHabits(w http.ResponseWriter, r *http.Request) {
 
 // CreateHabitTable will run once, to initialize the habit db relation
 func CreateHabitTable(w http.ResponseWriter, r *http.Request) {
-	db := main.SetDB()
+	db := SetDB()
 	defer db.Close()
 
 	db.Exec(`CREATE TABLE habits(habit_id SERIAL PRIMARY KEY, title VARCHAR(100), active BOOLEAN)`)
