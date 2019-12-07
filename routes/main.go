@@ -30,11 +30,11 @@ func CreateHabitTable(w http.ResponseWriter, r *http.Request) {
 	db := SetDB()
 	defer db.Close()
 
-	db.Exec(`CREATE TABLE habits(habit_id SERIAL PRIMARY KEY, title VARCHAR(100), active BOOLEAN)`)
+	// db.Exec(`CREATE TABLE habits(habit_id SERIAL PRIMARY KEY, title VARCHAR(100), active BOOLEAN)`)
 
-	// db.Exec(`INSERT INTO habits (title, active) VALUES ('biting my nails', true)`)
-	// db.Exec(`INSERT INTO habits (title, active) VALUES ('watching youtube videos', true)`)
-	// db.Exec(`INSERT INTO habits (title, active) VALUES ('waking up late', true)`)
+	db.Exec(`INSERT INTO habits (title, active) VALUES ('biting my nails', true)`)
+	db.Exec(`INSERT INTO habits (title, active) VALUES ('watching youtube videos', true)`)
+	db.Exec(`INSERT INTO habits (title, active) VALUES ('waking up late', true)`)
 
 	json.NewEncoder(w).Encode("you created and seeded the habits table")
 }
