@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 )
@@ -16,5 +17,5 @@ func main() {
 	r := mux.NewRouter()
 	// display all active habits
 	r.HandleFunc("/habits", AllHabits)
-	log.Fatal(http.ListenAndServe(":8080", r))
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), r))
 }
