@@ -12,8 +12,8 @@ func AllHabits(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode("We out here")
 }
 
-// CreateSeedHabitTable will run once, to initialize the habit db relation
-func CreateSeedHabitTable(w http.ResponseWriter, r *http.Request) {
+// CreateHabitTable will run once, to initialize the habit db relation
+func CreateHabitTable(w http.ResponseWriter, r *http.Request) {
 	db := main.SetDB()
 	defer db.Close()
 
