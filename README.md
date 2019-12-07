@@ -34,3 +34,4 @@
     - `firebase deploy`
 10. Basic styling with `CSS` and `SASS`
     - `npm install node-sass`
+    - `favicon.ico` business using `flaticon.com`
