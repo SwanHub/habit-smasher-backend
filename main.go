@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	// a comment to post
 	r := mux.NewRouter().StrictSlash(true)
 	// display all active habits
 	r.HandleFunc("/habits", routes.AllHabits).Methods("GET")
